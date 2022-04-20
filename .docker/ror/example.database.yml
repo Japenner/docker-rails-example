@@ -8,8 +8,8 @@ default: &default
 
 development:
   <<: *default
-  database: ror_development
+  database: rails_api_development
 
 test:
   <<: *default
-  database: ror_test
+  database: rails_api_test

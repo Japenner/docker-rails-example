@@ -8,12 +8,12 @@ Read the full article on [jigarius.com](https://jigarius.com/blog/ruby-on-rails-
 ## Getting started
 
 Follow the steps mentioned under _existing app_ or _new app_ depending on your
-situation. That will ensure that the `ror` directory is in order. After that,
+situation. That will ensure that the `rails_api` directory is in order. After that,
 follow these steps:
 
   * Destroy any existing containers with conflicting names.
   * Copy `.env.example` to `.env` and modify (if required).
-  * Create `config/database.yml` based on `.docker/ror/example.database.yml`.
+  * Create `config/database.yml` based on `.docker/rails_api/example.database.yml`.
   * Build an image for Ruby on Rails:
     ```
     docker-compose build
@@ -32,16 +32,16 @@ Cool! Now your Rails app should be available at
 
 ### Existing app
 
-  * Delete the contents of the `ror` directory.
-  * Put the files of your existing Rails app in the `ror` directory.
-    * The `Gemfile` should be at `ror/Gemfile`.
+  * Delete the contents of the `rails_api` directory.
+  * Put the files of your existing Rails app in the `rails_api` directory.
+    * The `Gemfile` should be at `rails_api/Gemfile`.
 
 ### New app
 
 If you want to start with a Rails app from scratch,
 
   * Create the following files:
-    * `Gemfile`: You can base this on `.docker/ror/example.Gemfile`.
+    * `Gemfile`: You can base this on `.docker/rails_api/example.Gemfile`.
     * `Gemfile.lock`: An empty file.
   * Run the following command to install Rails. You can modify the params for
     the `rails new` command as needed.

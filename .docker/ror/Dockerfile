@@ -9,13 +9,13 @@ RUN apt update -qq
 RUN apt install -y postgresql-client nodejs yarn
 
 # Prepare working directory.
-WORKDIR /ror
-COPY ./ror /ror
+WORKDIR /rails_api
+COPY ./rails_api /rails_api
 RUN gem install bundler
 RUN bundle install
 
 # Configure endpoint.
-COPY ./.docker/ror/entrypoint.sh /usr/bin/
+COPY ./.docker/rails_api/entrypoint.sh /usr/bin/
 RUN chmod +x /usr/bin/entrypoint.sh
 ENTRYPOINT ["entrypoint.sh"]
 EXPOSE 3000
